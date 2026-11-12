@@ -13,7 +13,7 @@ export const handler = async (event) => {
   const res = await fetch(slackUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text: `Issue Created: ${issueUrl}` }),
+    body: JSON.stringify({ text: "Issue Created: " + issueUrl }),
   });
   return await res.text();
 };
